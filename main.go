@@ -2,8 +2,22 @@ package main
 
 import (
 	day1 "advent-of-code-2022/day_1"
+	day2 "advent-of-code-2022/day_2"
 	"fmt"
 )
+
+func main() {
+	// firstDay()
+	secondDay()
+}
+
+func secondDay() {
+	rounds := day2.ParseStdInput()
+	result := day2.RockPaperScissorSumScores(rounds)
+	fmt.Println(result)
+	result2 := day2.RockPaperScissorSumDeterminedScores(rounds)
+	fmt.Println(result2)
+}
 
 func firstDay() {
 	pockets := day1.ParseStdInput()
@@ -11,8 +25,4 @@ func firstDay() {
 	fmt.Println(result)
 	result2 := day1.TopKthSum(pockets, 3)
 	fmt.Println(result2)
-}
-
-func main() {
-	firstDay()
 }
