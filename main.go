@@ -17,6 +17,9 @@ func thirdDay() {
 	items := day3.ParseStdInput()
 	result := day3.RusksackFilter(items)
 	fmt.Println(result)
+	triplets := day3.ParseStdInput2(items)
+	result2 := day3.RusksackFilterTriplet(triplets)
+	fmt.Println(result2)
 }
 
 func secondDay() {
