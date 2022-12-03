@@ -3,12 +3,20 @@ package main
 import (
 	day1 "advent-of-code-2022/day_1"
 	day2 "advent-of-code-2022/day_2"
+	day3 "advent-of-code-2022/day_3"
 	"fmt"
 )
 
 func main() {
 	// firstDay()
-	secondDay()
+	// secondDay()
+	thirdDay()
+}
+
+func thirdDay() {
+	items := day3.ParseStdInput()
+	result := day3.RusksackFilter(items)
+	fmt.Println(result)
 }
 
 func secondDay() {
