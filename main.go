@@ -4,13 +4,22 @@ import (
 	day1 "advent-of-code-2022/day_1"
 	day2 "advent-of-code-2022/day_2"
 	day3 "advent-of-code-2022/day_3"
+	day4 "advent-of-code-2022/day_4"
 	"fmt"
 )
 
 func main() {
 	// firstDay()
 	// secondDay()
-	thirdDay()
+	// thirdDay()
+	fourthDay()
+}
+
+func fourthDay() {
+	assignments := day4.ParseStdInput()
+	fmt.Println(assignments) // debug
+	result := day4.StreamlineAssignments(assignments)
+	fmt.Println(result)
 }
 
 func thirdDay() {
