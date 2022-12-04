@@ -20,6 +20,8 @@ func fourthDay() {
 	fmt.Println(assignments) // debug
 	result := day4.StreamlineAssignments(assignments)
 	fmt.Println(result)
+	result2 := day4.StreamlineAssignmentsFurther(assignments)
+	fmt.Println(result2)
 }
 
 func thirdDay() {

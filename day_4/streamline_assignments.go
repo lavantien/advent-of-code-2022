@@ -21,6 +21,23 @@ func StreamlineAssignments(assignments [][4]int) int {
 	return count
 }
 
+func StreamlineAssignmentsFurther(assignments [][4]int) int {
+	count := 0
+	for _, assignment := range assignments {
+		if anyContain(assignment) {
+			fmt.Println(assignment) // debug
+			count++
+		}
+	}
+	return count
+}
+
+func anyContain(assignment [4]int) bool {
+	any1 := assignment[3] >= assignment[0] && assignment[2] <= assignment[1]
+	any2 := assignment[1] >= assignment[2] && assignment[0] <= assignment[3]
+	return any1 || any2
+}
+
 // returns true if, for any pair a-b,c-d, a-b contains c-d or vice versa
 func mutualContain(assignment [4]int) bool {
 	firstContainsSecond := assignment[0] <= assignment[2] && assignment[1] >= assignment[3]
